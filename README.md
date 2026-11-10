@@ -36,17 +36,13 @@ Uncertainty is computed by resampling whole trajectories, not frames. The baseli
 
 On the original images, appearance is far outside the spread of the real data. KID is **0.236**. Random halves of the real trajectories sit near **0.001**. The two-dimensional view below is only an illustration: the first two principal components explain 25.1% of the variance in a balanced 4,000-frame subsample. The quantitative appearance result is the KID.
 
-<p align="center">
-  <img src="cv_project/results/phase4/figures/appearance_pca.png" width="640" alt="PCA of Inception embeddings">
-</p>
+<img src="cv_project/results/phase4/figures/appearance_pca.png" width="100%" alt="PCA of Inception embeddings">
 
 <p align="center"><em>Inception embeddings. Orange is simulation, blue is real. Equal sample size per domain.</em></p>
 
 The figure below divides each sim-to-real distance by the mean distance between random halves of the real data. The vertical line is 1. A bar to the right means the cross-domain distance is larger than the internal spread of that same metric. Bars are not comparable across metrics.
 
-<p align="center">
-  <img src="cv_project/results/phase4/figures/gap_vs_real_variability.png" width="720" alt="Each distance relative to its real-vs-real mean">
-</p>
+<img src="cv_project/results/phase4/figures/gap_vs_real_variability.png" width="100%" alt="Each distance relative to its real-vs-real mean">
 
 | Distance | Sim vs real | Real vs real | Ratio |
 |---|---:|---:|---:|
@@ -70,9 +66,7 @@ The figure below divides each sim-to-real distance by the mean distance between 
 
 Object count is the exception. Both domains leave about 72% of frames empty, and the count distance falls inside the real-vs-real spread. The detector fires at a similar rate. What it returns does not match: simulation boxes pile up near the full frame, and the leading labels differ.
 
-<p align="center">
-  <img src="cv_project/results/phase4/figures/class_frequencies.png" width="680" alt="Most common detector labels">
-</p>
+<img src="cv_project/results/phase4/figures/class_frequencies.png" width="100%" alt="Most common detector labels">
 
 <p align="center"><em>Share of detections, not of frames. Simulation responses are led by bed and umbrella. Real responses are led by vase.</em></p>
 
@@ -93,9 +87,7 @@ Sixteen levels, never stacked:
 | Brightness | −30, −15, +15, +30 | The same additive shift |
 | Color temperature | ±8, ±16, ±32 | R and B move in opposite directions; G is unchanged |
 
-<p align="center">
-  <img src="cv_project/results/phase5/figures/delta_heatmap.png" width="920" alt="Ablation heatmap">
-</p>
+<img src="cv_project/results/phase5/figures/delta_heatmap.png" width="100%" alt="Ablation heatmap">
 
 <p align="center"><em>Blue: that distance became smaller. Red: it became larger. Each row is scaled by its own largest change, so color depth cannot be compared across rows.</em></p>
 
