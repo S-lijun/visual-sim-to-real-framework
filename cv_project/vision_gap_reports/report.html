@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>仿真 / 实采视觉差异</title>
+<style>
+body { font-family: "Microsoft YaHei", "Segoe UI", sans-serif; margin: 32px auto; max-width: 980px; color: #0f172a; background: #f8fafc; }
+h1 { font-size: 28px; margin-bottom: 4px; }
+p, li { line-height: 1.55; }
+.note { color: #475569; }
+table { border-collapse: collapse; width: 100%; background: white; }
+th, td { border-bottom: 1px solid #e2e8f0; text-align: left; padding: 8px 10px; font-size: 14px; }
+th { background: #e2e8f0; }
+figure { margin: 18px 0; background: white; padding: 12px; border-radius: 8px; }
+img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+<h1>仿真视觉 vs 实采视觉</h1>
+<p class="note">两条序列没有逐帧对齐。下表比较的是各自帧集合上的分布，而不是同一时刻的像素误差。</p>
+<ul>
+<li>仿真：255 帧，轨迹 20260416_203935_525, 20260416_211855_905，分辨率 [(640, 480)]</li>
+<li>实采：104 帧，轨迹 20260419_084517，分辨率 [(640, 480)]</li>
+<li>颜色直方图交集 0.387（1 为完全重合），Hellinger 0.559（0 为完全重合）。</li>
+</ul>
+<h2>拉开最大的几项</h2>
+<ul>
+<li><b>对比度</b>：仿真更高，归一化差距 3.64（仿真均值 54.5，实采均值 18.7）。</li><li><b>高频能量</b>：实采更高，归一化差距 3.43（仿真均值 0.425，实采均值 0.613）。</li><li><b>饱和度</b>：仿真更高，归一化差距 1.84（仿真均值 0.226，实采均值 0.0981）。</li>
+</ul>
+<h2>图</h2>
+<figure><img src="mean_frames.png" alt="mean_frames.png"/></figure>
+<figure><img src="samples_sim.png" alt="samples_sim.png"/></figure>
+<figure><img src="samples_real.png" alt="samples_real.png"/></figure>
+<figure><img src="feature_histograms.png" alt="feature_histograms.png"/></figure>
+<figure><img src="gap_bars.png" alt="gap_bars.png"/></figure>
+<figure><img src="power_spectrum.png" alt="power_spectrum.png"/></figure>
+<figure><img src="color_histograms.png" alt="color_histograms.png"/></figure>
+<h2>数值</h2>
+<table>
+<thead><tr><th>特征</th><th>仿真均值</th><th>实采均值</th><th>Wasserstein</th><th>归一化差距</th><th>方向</th></tr></thead>
+<tbody>
+<tr><td>亮度</td><td>118.0</td><td>110.8</td><td>14.7</td><td>1.02</td><td>仿真更高</td></tr><tr><td>对比度</td><td>54.5</td><td>18.7</td><td>36.1</td><td>3.64</td><td>仿真更高</td></tr><tr><td>饱和度</td><td>0.226</td><td>0.0981</td><td>0.128</td><td>1.84</td><td>仿真更高</td></tr><tr><td>色彩丰富度</td><td>39</td><td>20.8</td><td>18.3</td><td>1.02</td><td>仿真更高</td></tr><tr><td>红/蓝比</td><td>0.983</td><td>0.976</td><td>0.0467</td><td>0.542</td><td>仿真更高</td></tr><tr><td>锐度</td><td>14.4</td><td>11.8</td><td>6.93</td><td>0.847</td><td>仿真更高</td></tr><tr><td>高频能量</td><td>0.425</td><td>0.613</td><td>0.189</td><td>3.43</td><td>实采更高</td></tr><tr><td>噪声</td><td>1.09</td><td>0.997</td><td>0.311</td><td>0.839</td><td>仿真更高</td></tr><tr><td>边缘密度</td><td>0.00284</td><td>0.00101</td><td>0.00185</td><td>1.22</td><td>仿真更高</td></tr><tr><td>帧间差</td><td>7.47</td><td>4.49</td><td>3.83</td><td>0.649</td><td>仿真更高</td></tr><tr><td>光流幅度</td><td>1.61</td><td>0.429</td><td>1.23</td><td>0.902</td><td>仿真更高</td></tr><tr><td>光流 P95</td><td>10.6</td><td>2.07</td><td>8.7</td><td>0.962</td><td>仿真更高</td></tr>
+</tbody>
+</table>
+</body>
+</html>

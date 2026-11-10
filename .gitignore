@@ -78,5 +78,16 @@ _build
 # Tests
 tests/
 
+# Visual-evaluation caches. Reports, figures, and code stay tracked.
+cv_project/data/
+cv_project/drive-download-*/
+cv_project/.vendor/
+cv_project/features/sim/
+cv_project/features/real/
+cv_project/features/phase5/
+cv_project/**/__pycache__/
+cv_project/**/*.pyc
+cv_project/project.ipynb
+
 # Docker history
 .isaac-lab-docker-history

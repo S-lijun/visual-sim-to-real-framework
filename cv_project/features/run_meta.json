@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-11-08T22:06:05.078221+00:00",
+  "device": "cuda",
+  "modules": [
+    "appearance",
+    "semantic",
+    "geometry",
+    "temporal"
+  ],
+  "limit_episodes": null,
+  "counts_this_run": {
+    "sim": {
+      "episodes": 157,
+      "frames": 31526
+    },
+    "real": {
+      "episodes": 157,
+      "frames": 11963
+    }
+  },
+  "geometry_value_meaning": "midas_dpt_disparity_larger_is_closer",
+  "geometry_normalization": "none_raw_midas_output",
+  "temporal_scope": "consecutive frames inside one episode",
+  "semantic_empty_policy": "count is 0; confidence and boxes are omitted",
+  "appearance_preprocess": "bilinear 299x299, ImageNet mean/std, no center crop",
+  "config": {
+    "real_dir": "C:\\CV_Project\\cv_project\\data\\real_obses_15fps\\obses_15fps",
+    "sim_dir": "C:\\CV_Project\\cv_project\\data\\sim_obses_15fps\\obses_15fps",
+    "out_dir": "C:\\CV_Project\\cv_project\\features",
+    "yolo_weights": "C:\\CV_Project\\cv_project\\yolov8n.pt",
+    "yolo_conf": 0.25,
+    "yolo_batch": 16,
+    "midas_model": "DPT_Large",
+    "midas_batch": 8,
+    "inception_batch": 32,
+    "image_hw": [
+      480,
+      640
+    ],
+    "declared_fps": 15.0,
+    "flow_pyr_scale": 0.5,
+    "flow_levels": 3,
+    "flow_winsize": 15,
+    "flow_iterations": 3,
+    "flow_poly_n": 5,
+    "flow_poly_sigma": 1.2,
+    "flow_motion_px": 1.0,
+    "direction_bins": 36,
+    "kid_subset_size": 1000,
+    "kid_repeats": 100,
+    "kid_degree": 3,
+    "kid_seed": 0,
+    "seed": 0
+  },
+  "torch": "2.9.0+cu128"
+}

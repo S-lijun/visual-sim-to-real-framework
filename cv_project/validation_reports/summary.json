@@ -1,0 +1,86 @@
+{
+  "passed_format_checks": true,
+  "ignored": [
+    "states.pth",
+    "actions.pth",
+    "costs.pth",
+    "traj/",
+    "lidar"
+  ],
+  "domains": [
+    {
+      "domain": "real",
+      "directory": "C:\\CV_Project\\cv_project\\data\\real_obses_15fps\\obses_15fps",
+      "n_files": 157,
+      "n_episodes_read": 157,
+      "n_episodes_ok": 157,
+      "episode_id_min": 0,
+      "episode_id_max": 156,
+      "missing_episode_ids": [],
+      "n_failures": 0,
+      "failures": [],
+      "total_frames": 11963,
+      "frames_min": 35,
+      "frames_mean": 76.2,
+      "frames_max": 355,
+      "resolution_hwc": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "layout": "(T, H, W, 3)",
+      "declared_fps": 15.0,
+      "duration_sec": 797.53,
+      "mean_rgb": [
+        107.8589,
+        112.5207,
+        114.1987
+      ],
+      "n_blank_frames": 0,
+      "blank_std_threshold": 1.5,
+      "n_consecutive_pairs": 11806,
+      "n_still_pairs_mad_lt_1": 118,
+      "still_pair_fraction": 0.009995,
+      "per_frame_timestamps_stored": false,
+      "notes": "RGB tensors have no per-frame timestamps. Frame order inside each episode is the tensor index. Effective rate is the declared 15 fps shared by both folders."
+    },
+    {
+      "domain": "sim",
+      "directory": "C:\\CV_Project\\cv_project\\data\\sim_obses_15fps\\obses_15fps",
+      "n_files": 157,
+      "n_episodes_read": 157,
+      "n_episodes_ok": 157,
+      "episode_id_min": 0,
+      "episode_id_max": 156,
+      "missing_episode_ids": [],
+      "n_failures": 0,
+      "failures": [],
+      "total_frames": 31526,
+      "frames_min": 44,
+      "frames_mean": 200.8,
+      "frames_max": 503,
+      "resolution_hwc": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "layout": "(T, H, W, 3)",
+      "declared_fps": 15.0,
+      "duration_sec": 2101.73,
+      "mean_rgb": [
+        131.6831,
+        124.3367,
+        121.378
+      ],
+      "n_blank_frames": 0,
+      "blank_std_threshold": 1.5,
+      "n_consecutive_pairs": 31369,
+      "n_still_pairs_mad_lt_1": 1561,
+      "still_pair_fraction": 0.049763,
+      "per_frame_timestamps_stored": false,
+      "notes": "RGB tensors have no per-frame timestamps. Frame order inside each episode is the tensor index. Effective rate is the declared 15 fps shared by both folders."
+    }
+  ]
+}

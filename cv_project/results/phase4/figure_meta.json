@@ -1,0 +1,131 @@
+{
+  "pca": {
+    "per_domain": 4000,
+    "seed": 4,
+    "pc1": 0.18425913744813585,
+    "pc2": 0.06674252562731943,
+    "pc1_pc2": 0.2510016630754553
+  },
+  "ratios": [
+    {
+      "metric": "appearance.kid",
+      "label": "Appearance KID",
+      "point": 0.23602330706198293,
+      "real_vs_real_mean": 0.0010056772232055664,
+      "ratio_to_real_vs_real": 234.69091435686056
+    },
+    {
+      "metric": "semantic.count",
+      "label": "Box count",
+      "point": 0.009562409299934571,
+      "real_vs_real_mean": 0.02866198854392007,
+      "ratio_to_real_vs_real": 0.3336268621167598
+    },
+    {
+      "metric": "semantic.confidence",
+      "label": "Confidence",
+      "point": 0.07330436483675809,
+      "real_vs_real_mean": 0.012533400708443611,
+      "ratio_to_real_vs_real": 5.8487210727551195
+    },
+    {
+      "metric": "semantic.box_area",
+      "label": "Box area",
+      "point": 0.40897174749224896,
+      "real_vs_real_mean": 0.021714723927335044,
+      "ratio_to_real_vs_real": 18.83384513018952
+    },
+    {
+      "metric": "semantic.class_js",
+      "label": "Class JS",
+      "point": 0.5625445569490645,
+      "real_vs_real_mean": 0.029196866363471862,
+      "ratio_to_real_vs_real": 19.2672922479401
+    },
+    {
+      "metric": "geometry.disparity_mean",
+      "label": "Disparity mean",
+      "point": 1.8718606958725823,
+      "real_vs_real_mean": 0.2572952992997728,
+      "ratio_to_real_vs_real": 7.275145332879524
+    },
+    {
+      "metric": "geometry.disparity_std",
+      "label": "Disparity std",
+      "point": 2.0530892261587805,
+      "real_vs_real_mean": 0.08754084992906341,
+      "ratio_to_real_vs_real": 23.452927722571246
+    },
+    {
+      "metric": "geometry.disparity_p05",
+      "label": "Disparity p05",
+      "point": 2.137040734515062,
+      "real_vs_real_mean": 0.2135432032470108,
+      "ratio_to_real_vs_real": 10.007533379758724
+    },
+    {
+      "metric": "geometry.disparity_p50",
+      "label": "Disparity p50",
+      "point": 2.0373026078785124,
+      "real_vs_real_mean": 0.31408246175992305,
+      "ratio_to_real_vs_real": 6.486521394613166
+    },
+    {
+      "metric": "geometry.disparity_p95",
+      "label": "Disparity p95",
+      "point": 4.159025419528885,
+      "real_vs_real_mean": 0.23390549063104502,
+      "ratio_to_real_vs_real": 17.7807943212808
+    },
+    {
+      "metric": "geometry.grad_mean",
+      "label": "Gradient mean",
+      "point": 0.10909880434404799,
+      "real_vs_real_mean": 0.010591356458016073,
+      "ratio_to_real_vs_real": 10.300739548943849
+    },
+    {
+      "metric": "geometry.grad_p95",
+      "label": "Gradient p95",
+      "point": 0.1315342266575208,
+      "real_vs_real_mean": 0.013609523055444472,
+      "ratio_to_real_vs_real": 9.664866734980892
+    },
+    {
+      "metric": "temporal.mag_mean",
+      "label": "Flow mean",
+      "point": 0.5738649841911446,
+      "real_vs_real_mean": 0.11538474371730761,
+      "ratio_to_real_vs_real": 4.97349099805701
+    },
+    {
+      "metric": "temporal.mag_std",
+      "label": "Flow std",
+      "point": 2.011781170268803,
+      "real_vs_real_mean": 0.2758205987541486,
+      "ratio_to_real_vs_real": 7.293803216133233
+    },
+    {
+      "metric": "temporal.mag_p95",
+      "label": "Flow p95",
+      "point": 4.870291690166684,
+      "real_vs_real_mean": 0.7246078872031277,
+      "ratio_to_real_vs_real": 6.721278882245185
+    },
+    {
+      "metric": "temporal.motion_frac",
+      "label": "Motion fraction",
+      "point": 0.0425605938540798,
+      "real_vs_real_mean": 0.007950856347314286,
+      "ratio_to_real_vs_real": 5.352957215540225
+    },
+    {
+      "metric": "temporal.direction",
+      "label": "Direction",
+      "point": 0.23854466118097245,
+      "real_vs_real_mean": 0.061312666148828424,
+      "ratio_to_real_vs_real": 3.8906261326482965
+    }
+  ],
+  "display_note": "Scalar histograms except count, confidence, and box area show the 1st to 99th percentile window."
+}
