@@ -11,13 +11,11 @@ The comparison is unpaired. Each trajectory is one episode, stored as a `uint8` 
 | Duration at 15 fps | 2,102 s | 798 s |
 | Frames per episode | 44–503, mean 201 | 35–355, mean 76 |
 
-<p align="center">
-  <img src="cv_project/validation_reports/preview_sim_ep0.png" width="420" alt="Simulation RGB, episode 0">
-  &nbsp;
-  <img src="cv_project/validation_reports/preview_real_ep0.png" width="420" alt="Real RGB, episode 0">
-</p>
+| Simulation | Real |
+| :---: | :---: |
+| <img src="cv_project/validation_reports/preview_sim_ep0.png" width="360" alt="Simulation RGB, episode 0"> | <img src="cv_project/validation_reports/preview_real_ep0.png" width="360" alt="Real RGB, episode 0"> |
 
-<p align="center"><em>Episode 0. Left: simulation. Right: real. Both cameras look down at interlocking foam tiles and a blue bin. The images are not frame-aligned.</em></p>
+*Episode 0. Both cameras look down at interlocking foam tiles and a blue bin. The images are not frame-aligned.*
 
 ## What is measured
 
